@@ -12,10 +12,10 @@ class MenuManager: ObservableObject {
     @Published var menu: [CategoryModel] = []
     
     init() {
-        refreshItemsFromNetwork()
+        fetchItems()
     }
     
-    func refreshItemsFromNetwork()  {
+    func fetchItems()  {
         AF.request("https://firtman.github.io/coffeemasters/api/menu.json")
             .responseDecodable(of: [CategoryModel].self) { response in
                 if let menuFromNetwork = response.value {
