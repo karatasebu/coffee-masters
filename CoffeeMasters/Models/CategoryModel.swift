@@ -6,3 +6,11 @@
 //
 
 import Foundation
+
+struct CategoryModel: Decodable, Identifiable {
+    var name: String
+    var products: [ProductModel]
+    var id: String {
+        return self.name
+    }
+}

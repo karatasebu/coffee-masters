@@ -7,14 +7,16 @@
 
 import SwiftUI
 
-struct ProductItem: View {
+struct Product: View {
+    @State var quantity = 1
+    
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        
     }
 }
 
-struct ProductItem_Previews: PreviewProvider {
+struct Product_Previews: PreviewProvider {
     static var previews: some View {
-        ProductItem()
+        Product()
     }
 }
